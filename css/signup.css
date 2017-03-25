@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Merienda+One|Pacifico');
+
+		div{
+			font-family: 'Merienda One', cursive;
+			width: 90%;
+			height: 90%;
+			margin: 0 auto;		
+		}
+		form{
+			border: 5px solid black;
+			padding: 10px;
+			margin: 0 auto;
+			text-align: center;
+			background-color: white;
+			filter: opacity(80%);
+			width: 50%;
+			margin-top: 20px;
+		}
+		input{
+			display: block;
+			padding: 10px;
+			margin: 0 auto;
+		}
+		#sub{
+			background-color: black;
+			color: white;
+			padding: 15px;
+			font-family: 'Merienda One', cursive;
+			font-size: 15px;
+		}

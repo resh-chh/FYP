@@ -1,0 +1,14 @@
+
+		.footr{
+			background-color: white;
+	  		position: relative;
+ 			text-align: center;
+  			bottom: 0;
+			margin: 0 auto;
+			width: 90%;
+			filter: opacity(80%);
+
+		}
+		h3{
+			text-shadow: 5px 5px 5px teal;
+		}
