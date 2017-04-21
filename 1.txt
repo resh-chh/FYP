@@ -1,0 +1,19 @@
+petfinderindia@gmail.com
+pass 91019SRV
+
+
+
+
+petfinderindia-buyer@gmail.com
+91019SRV
+Account Number:
+34038938
+Routing Number:
+ICIC0000212
+
+
+
+
+petfinderindia-facilitator_api1.gmail.com
+ENUBKTHBZ29YX67L
+Signature:AFcWxV21C7fd0v3bYYYRCpSSRl31AcZm-9ZWMHuLcfLFiznZKMSA.OAY
