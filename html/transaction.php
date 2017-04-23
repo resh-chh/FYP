@@ -9,6 +9,7 @@
 <?php include 'adminnav.php';?>
 
 <div>
+<h3 id="te">Delete Pets</h3>
 <form action="../php/trans.php" method="POST">
 
 <table id="a1">
@@ -48,6 +49,8 @@ mysqli_close($conn);
 
 </form>
 </div>
+<br>
+<br>
 <div class="bot">
     <?php include 'footer.php' ;?>
 </div>
