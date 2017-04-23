@@ -4,25 +4,117 @@
   <title>
     FindYourPet
   </title>
-<link rel="stylesheet" type="text/css" href="style.css">
-
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
-<body >
-<header style="color: black;" >
-  Find A Pet To Adopt
-</header>
+<style type="text/css">
+  @media only screen and (max-width: 470px){
 
-<div class="search" style="background-color: lavender;">
+
+.textoverimage{
+  width: 80%;
+ margin-right: 10%;
+}
+  .imagebox{
+
+   margin-top: 3%;
+   margin-right: 10%;
+   margin-left: 10%;
+   background-color: black;
+   opacity: 0.8;
+   height: auto;
+   border-radius: 4px;
+   box-shadow: 4px 4px lightgrey;
+   width: 100%;
+  }
+
+
+.search{
+   margin-right: 10%;
+   margin-left: 10%;
+   background-color: grey;
+   opacity: 1;
+   height: 70%;
+   border-radius: 4px;
+   box-shadow: 4px 4px lightgrey;
+  }  
+
+}
+
+@media only screen and (min-width: 470px) and (max-width: 720px){
+
+.textoverimage{
+  width: 80%;
+
+}
+
+.search{
+   margin-right: 10%;
+   margin-left: 10%;
+   background-color: grey;
+   opacity: 1;
+   height: 50%;
+   border-radius: 4px;
+   box-shadow: 4px 4px lightgrey;
+  }
+
+.field-input{
+display: inline;
+position: relative;
+float: left;
+
+
+}
+#button{
+  vertical-align: center;
+}
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1204px){
+
+.textoverimage{
+  width: 39%;
+}
+ 
+.search{
+   margin-right: 10%;
+   margin-left: 10%;
+   background-color: grey;
+   opacity: 1;
+   height: auto;
+  
+   border-radius: 4px;
+   box-shadow: 4px 4px lightgrey;
+  }
+
+.field-input{
+display: inline;
+position: relative;
+float: left;
+
+
+}
+
+
+}
+  
+
+
+</style>
+<body >
+<?php include '../html/header.php' ;?>
+
+
+<div class="search col-12" style="background-color: lavender;">
 
 <h2 style="margin: 10px">Search</h2>
 <form method="POST">
 <div class="field is-focused">
 <label for="animal" class="field-label">Location</label>
-<input type="text" id="location" name="location" class="field-input">
+<input type="text" id="location" name="location" class="field-input ">
 </div>
 <div class="field">
 <label for="animal" class="field-label">Category</label>
-<select class="field-input" id="type" name="typee" style="width: 120px;" onclick="window.getbreed();">
+<select class="field-input " id="type" name="typee"  onclick="getbreed();">
     <option></option>
   <option>Dog</option>
   <option>Cat</option>
@@ -31,33 +123,31 @@
 </div>
 <div class="field bread">
 <label for="animal" class="field-label">Breed</label>
-<select class="field-input" name="breed" id="inputbreed" style="width: 120px;" ></select>
+<select class="field-input " name="breed" id="inputbreed" style="width: 110px;" ></select>
 </div>
 <div class="field gender">
 <label for="animal" class="field-label">Gender</label>
-<select class="field-input" id="gender" name="gender" style="width: 120px;">
+<select class="field-input " id="gender" name="gender">
 <option></option>
   <option >Male</option>
   <option>Female</option>
 </select>
 </div>
-
 <div class="field">
-<label for="animal" class="field-label">Age</label>
-<select class="field-input" id="age" name="age" style="width: 120px;">
+<label for="animal" class="field-label ">Age</label>
+<select class="field-input" id="age" name="age" >
 <option></option>
   <option>Baby</option>
   <option>Young</option>
   <option>Adult</option>
   <option>Senior</option>
-  
-
-</select>
+  </select>
 </div>
 
 <div class="field">
 
-<input type="submit" name="submit" class="field-input" id="button" style="border-radius: 20px;transform: translateY(20px); margin-left: 10px; margin-right: 15px" onclick="validate();" ></input>
+<input type="submit" name="submit" class="field-input" id="button" style="border-radius: 20px;transform: translateY(20px); margin-left: 10px; margin-right: 15px" 
+onclick="validate();" ></input>
 
 </div>
 </form>
@@ -68,9 +158,9 @@
 <div class="imagebox col-12" id="displaybox" style="background-color: lavender;">
 <?php
 $ab="abc";
-mysqli_connect("localhost","root","");
-mysqli_select_db("petfinder");
-$result=mysqli_query("select path,Description,id from animal order by rand() LIMIT 9");
+$conn= mysqli_connect("localhost","root","", "petfinder");
+// mysqli_select_db("petfinder");
+$result=mysqli_query($conn, "select path,Description,id from animal order by rand() LIMIT 9");
 while ($row=mysqli_fetch_array($result)) {
 ?><div class="col-4 textoverimage" style="background-image: url(<?php echo $row[0] ?>); color: coral; font-size: 20px; " data-text="<?php echo $row[1] ?>">
  <button id="<?php echo $row[2] ?>" style="bottom: 0;right: 0; float: right;padding: 10px;"  onclick="redirect(this.id);">Adopt</button></div>
@@ -146,15 +236,16 @@ $(document).ready(function(){
       {
 
         var type=document.getElementById("type").value;
-        xhttp.open("GET","notif.php?q="+type,true);
+        xhttp.open("GET","../php/notif.php?q="+type,true);
        xhttp.onreadystatechange=function()
        {
         if(this.readyState ==4 ){
           
           var s=this.responseText;
-                    var data="";
+          var data="";
+          //alert(s);
           var ss=JSON.parse(s);
-
+          //alert(s);
           $.each(ss,function(i,item){
           data=data+"<option value="+item.bread+">"+item.bread+"</option>";
           });
@@ -212,7 +303,7 @@ $(document).ready(function(){
         var type=document.getElementById("type").value;
         var breed=document.getElementById("inputbreed").value;
        
-        xhttp.open("GET","images.php?type="+type+"&breed="+breed,true);
+        xhttp.open("GET","../php/images.php?type="+type+"&breed="+breed,true);
        xhttp.onreadystatechange=function()
        {
         if(this.readyState ==4 ){
@@ -220,7 +311,7 @@ $(document).ready(function(){
           var s=this.responseText;
           //alert(s);
           var ss=JSON.parse(s);
-         alert(ss);
+        // alert(ss);
 
           var data=[];
           var desc=[];
@@ -288,7 +379,7 @@ $(document).ready(function(){
      }
 };
   
-    xhttp.open("GET","notif.php?q="+str,true);
+    xhttp.open("GET","../php/notif.php?q="+str,true);
     xhttp.send();
   });
 
@@ -325,7 +416,7 @@ $(document).ready(function(){
       var desc;
       function redirect(id){
       
-      alert(document.getElementById(id)+"   "+id);
+      //alert(document.getElementById(id)+"   "+id);
     
       var xhttp;
       try{
@@ -340,25 +431,25 @@ $(document).ready(function(){
       if(xhttp)
       { 
           imageredirect=document.getElementById(id).parentNode.style.backgroundImage;
-          alert(imageredirect);
+          //alert(imageredirect);
           a= imageredirect.replace('url("','');
           b= a.replace('")','');
-         alert(b);
-        xhttp.open("GET","buybackup.php?q="+b,true);
+         //alert(b);
+        xhttp.open("GET","../php/buybackup.php?q="+b,true);
        xhttp.onreadystatechange=function()
        {
         if(this.readyState ==4 ){
           //alert("d");
           var s=this.responseText;
-          alert(s);
+          //alert(s);
           var ss=JSON.parse(s);
-         alert(ss);
+         //alert(ss);
          
           $.each(ss,function(i,item){
           desc=item.Description;
           price=item.Price;
            });
-          alert(price);
+          //alert(price);
          document.getElementById("displaybox").innerHTML="";
          var info="";
          info=info+"<div class='"+"textoverimage col-4"+"' style='"+"background-image:url("+b+");"+"'></div>"+
@@ -366,7 +457,7 @@ $(document).ready(function(){
          "<p style= '"+"font-size: 25px; font-family: 'Berkshire Swash', cursive ;"+"'>Details<br>Description:"+desc+"</p>"+
          "<p style= '"+"font-size: 25px; font-family: 'Berkshire Swash', cursive;"+"' >Price:"+price+"</p></div>"
          document.getElementById("displaybox").innerHTML=info+"<div id='"+"paypal-button-container"+"' style='"+"float: left"+"';></div>"+
-         " <form target='"+"sandbox"+"' action='"+"https://www.sandbox.paypal.com"+"' method='"+"post"+"'><input type='"+"hidden"+"' name='"+"business"+"'value='"+"chhabriasonia05-facilitator@gmail.com"+"'> <input type='"+"hidden"+"' name='"+"cmd"+"' value='"+"_cart"+"'> <input type='"+"hidden"+"' name='"+"add"+"' value='"+"1"+"'><input type='"+"hidden"+"' name='"+"item_name"+"' value='"+desc+"'><input type='"+"hidden"+"' name='"+"amount"+"'value='"+price+"'> <input type='"+"hidden"+"' name='"+"currency_code"+"' value='"+"USD"+"'><input type='"+"image"+"' name='"+"submit"+"' src='"+"https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png"+"'></form>";
+         " <form target='"+"sandbox"+"' action='"+"https://www.sandbox.paypal.com"+"' method='"+"post"+"'><input type='"+"hidden"+"' name='"+"business"+"'value='"+"chhabriasonia05-facilitator@gmail.com"+"'> <input type='"+"hidden"+"' name='"+"cmd"+"' value='"+"_cart"+"'> <input type='"+"hidden"+"' name='"+"add"+"' value='"+"1"+"'><input type='"+"hidden"+"' name='"+"item_name"+"' value='"+desc+"'><input type='"+"hidden"+"' name='"+"amount"+"'value='"+price+"'> <input type='"+"hidden"+"'name='"+"currency_code"+"' value='"+"USD"+"'><input type='"+"image"+"' name='"+"submit"+"' src='"+"https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_addtocart_120x26.png"+"'></form>";
 
         // document.getElementById("displaybox").innerHTML=info;
          
@@ -380,14 +471,14 @@ $(document).ready(function(){
         // Create a PayPal app: https://developer.paypal.com/developer/applications/create
 
         client: {
-            sandbox:    'AXMpvyPs1oEnXyUnq9TpaQuJid4AmwjZMd6kh0INfHoAzyeP5rAbMn6PrUaGw0DZsDyEwnv97yvondcP',
+             sandbox:    'AXMpvyPs1oEnXyUnq9TpaQuJid4AmwjZMd6kh0INfHoAzyeP5rAbMn6PrUaGw0DZsDyEwnv97yvondcP',
             production: 'EPr74yGVEiI2pm0EEbEklFyXEEukV71mcbK5adCz6fkovK8181mAjQ0mWEYygigSmKHJGGrWi6axVUrd'
         },
 
         // Wait for the PayPal button to be clicked
 
         payment: function() {
-              alert(price);
+            //  alert(price);
             // Make a client-side call to the REST api to create the payment
 
             return paypal.rest.payment.create(this.props.env, this.props.client, {
@@ -428,4 +519,5 @@ $(document).ready(function(){
          
     </script>
 </body>
+
 </html>

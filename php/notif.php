@@ -1,12 +1,9 @@
 <?php
-//$type=$_REQUEST["q"];
 
-if(isset($_GET['q']))
-{
 
 $type=$_GET["q"];
 
-mysqli_connect("localhost","root","", "petfinder");
+$conn=mysqli_connect("localhost","root","", "petfinder");
 // mysql_select_db("petfinder");
 $result=mysqli_query($conn, "select bread from animal where type='$type' group by bread");
 /*$array=mysql_fetch_assoc($result);
@@ -15,7 +12,7 @@ print_r($array);
 while($array=mysqli_fetch_assoc($result))
 {
 	$row[]=$array;
-}}
+}
 
 
 /*
