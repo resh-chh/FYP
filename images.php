@@ -8,11 +8,11 @@
 $type=$_GET['type'];
 $breed=$_GET['breed'];
 
-mysql_connect("localhost","root","");
-mysql_select_db("petfinder");
-$result=mysql_query("select path,Description,id from animal where Bread='$breed' and type='$type'");
+$conn = mysqli_connect("localhost","root","", "petfinder");
+// mysql_select_db("petfinder");
+$result=mysqli_query($conn, "select path,Description,id from animal where Bread='$breed' and type='$type'");
 
-while($row=mysql_fetch_assoc($result)){
+while($row=mysqli_fetch_assoc($result)){
   
    $arr[]=$row;
 

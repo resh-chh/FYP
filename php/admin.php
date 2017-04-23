@@ -5,7 +5,7 @@ $breed = $_POST['breed'];
 $location = $_POST['location'];
 $description = $_POST['description'];
 
-$conn = mysqli_connect("localhost", "root", "", "ait");
+$conn = mysqli_connect("localhost", "root", "", "petfinder");
 
 $sql = "Insert into pets (name, type, breed, location, description) values ('".$name."', '".$type."', '".$breed."', '".$location."', '".$description."')";
 	mysqli_query($conn, $sql);

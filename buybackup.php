@@ -2,10 +2,10 @@
 
 $path = $_GET['q'];
 //$path= "images/ac1.jpg";
-mysql_connect("localhost","root","");
-mysql_select_db("petfinder");
-$result = mysql_query(" Select Description , Price from animal where path = '$path'");
-while ($row = mysql_fetch_assoc($result)) {
+$conn=mysqli_connect("localhost","root","", "petfinder");
+// mysql_select_db("petfinder");
+$result = mysqli_query($conn, " Select Description , Price from animal where path = '$path'");
+while ($row = mysqli_fetch_assoc($result)) {
 
 $array[] = $row;
 

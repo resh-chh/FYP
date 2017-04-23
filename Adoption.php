@@ -101,9 +101,8 @@ float: left;
 
 </style>
 <body >
-<header style="color: black;" >
-  Find A Pet To Adopt
-</header>
+<?php include '../html/header.php' ;?>
+
 
 <div class="search col-12" style="background-color: lavender;">
 
@@ -158,10 +157,10 @@ float: left;
 <div class="imagebox col-12" id="displaybox" style="background-color: lavender;">
 <?php
 $ab="abc";
-mysql_connect("localhost","root","");
-mysql_select_db("petfinder");
-$result=mysql_query("select path,Description,id from animal order by rand() LIMIT 9");
-while ($row=mysql_fetch_array($result)) {
+$conn= mysqli_connect("localhost","root","", "petfinder");
+// mysqli_select_db("petfinder");
+$result=mysqli_query($conn, "select path,Description,id from animal order by rand() LIMIT 9");
+while ($row=mysqli_fetch_array($result)) {
 ?><div class="col-4 textoverimage" style="background-image: url(<?php echo $row[0] ?>); color: coral; font-size: 20px; " data-text="<?php echo $row[1] ?>">
  <button id="<?php echo $row[2] ?>" style="bottom: 0;right: 0; float: right;padding: 10px;"  onclick="redirect(this.id);">Adopt</button></div>
 <?php
@@ -518,4 +517,5 @@ $(document).ready(function(){
          
     </script>
 </body>
+
 </html>

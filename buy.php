@@ -76,11 +76,11 @@ transition: 0.5s;
      <div class="col-4"><?php  
 
 $path=$_REQUEST['q'];
-mysql_connect("localhost","root","");
-mysql_select_db("petfinder");
-$result=mysql_query("select Description ,Price from animal where path='$path'");
+$conn= mysqli_connect("localhost","root","", "petfinder");
+// mysql_select_db("petfinder");
+$result=mysqli_query($conn, "select Description ,Price from animal where path='$path'");
 $price=0;
-while($row=mysql_fetch_assoc($result))
+while($row=mysqli_fetch_assoc($result))
 {?>
 
 <p style="font-size: 25px; font-family: 'Berkshire Swash', cursive"; >Details<br>Description:<?php echo $row["Description"]; ?></p>

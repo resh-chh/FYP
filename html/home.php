@@ -8,7 +8,7 @@
 </head>
 <body>
 <div>
-
+<?php if(isset($_COOKIE['role'])){if($_COOKIE['role']=='admin') header('location: ../html/admin.php');}?>
 <?php include 'header.php' ;?>
 
 	<a href="../html/loginpage.php"><div class="dat">

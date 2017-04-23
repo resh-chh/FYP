@@ -6,18 +6,15 @@ if(isset($_GET['q']))
 
 $type=$_GET["q"];
 
-mysql_connect("localhost","root","");
-mysql_select_db("petfinder");
-$result=mysql_query("select bread from animal where type='$type' group by bread");
+mysqli_connect("localhost","root","", "petfinder");
+// mysql_select_db("petfinder");
+$result=mysqli_query($conn, "select bread from animal where type='$type' group by bread");
 /*$array=mysql_fetch_assoc($result);
 print_r($array);
 */
-while($array=mysql_fetch_assoc($result))
+while($array=mysqli_fetch_assoc($result))
 {
-	
-	
 	$row[]=$array;
-
 }}
 
 
@@ -33,9 +30,6 @@ if( empty($row))
 echo(json_encode(false));
 else
 echo(json_encode($row));
-
-
-
 
 ?>
 

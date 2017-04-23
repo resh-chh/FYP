@@ -10,7 +10,10 @@
 		<ul>
 			<li><a href="../html/admin.php">Home</a></li>
 			<li><a href="#">View Transactions</a></li>
-			<li class="ri"><a href="../html/home.php">Logout</a></li>
+			<li class="ri"><?php if (isset($_COOKIE['user'])) { ?>
+							<a href="../php/logout.php"> Logout </a>
+						<?php }?>
+							</li>
 
 		</ul>
 	</nav>

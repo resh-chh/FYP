@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/signup.css">
 </head>
 <body>
+<?php if(isset($_COOKIE['role'])){if($_COOKIE['role']=='admin') header('location: ../html/admin.php');}?>
 <div>
 <?php include 'header.php' ;?>
 
@@ -23,6 +24,16 @@ Location: <input list="location" name="location" default="Mumbai">
 					<option value="Ulhasnagar">Ulhasnagar</option>
 				</datalist>
 				<br>
+
+	  <div><p style="color: red;">
+    <?php 
+    if( isset($_COOKIE['err']) )
+    {
+        echo $_COOKIE['err'];
+
+        setcookie('err', '', time()-60, '/');
+
+    }  ?></p></div>
 <input type="Submit" name="submit" value="Submit" id="sub">
 </form>
 

@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/admin.css">
 </head>
 <body>
-
+<?php if($_COOKIE['role']=='user') header('location: ../html/home.php');?>
 <div>
 	<?php include 'adminnav.php' ;?>
 
@@ -15,12 +15,9 @@
 		<label>Type: </label><input type="radio" name="type" value="Cat" checked> Cat
 							<input type="radio" name="type" value="Dog"> Dog
 							<input type="radio" name="type" value="Rabbit"> Rabbit
-		<label>Breed: </label><input type="radio" name="breed" value="american_curl" checked> American Curl
-							<input type="radio" name="type" value="beagle"> Beagle
-							<input type="radio" name="type" value="bunny"> Bunny
-							<input type="radio" name="type" value="bengal"> Bengal
+		<label>Breed: </label><input type="name" name="breed"> 
 							
-		<label>Image: </label><input type="file" name="image">
+		<label>Image: </label><input type="file" name="image"><br><br>
 		<label>Location: </label><input list="location" name="location" default="Mumbai">
 				<datalist id="location" >
 					<option value="Mumbai">Mumbai</option>
