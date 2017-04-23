@@ -196,6 +196,28 @@ input:not(:focus):valid ~ .floating-label6{
   transition: 0.2s ease all;
    opacity: 0.5;
 }
+
+li:last-child{
+  float: right;
+}
+    .bot{
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 3%;
+      padding: 5px;
+      border: 5px solid lavender;
+      background-color: white;
+      filter: opacity(80%);
+      text-align: center;
+    }
+#sub{
+      background-color: black;
+      color: white;
+      padding: 15px;
+      font-family: 'Merienda One', cursive;
+      font-size: 15px;
+    }
+
 	</style>
 </head>
 <body>
@@ -203,14 +225,14 @@ input:not(:focus):valid ~ .floating-label6{
       
 
    <nav id="navig">
-      <li> <a href="/html/home.php">Home</a></li>
+      <li> <a href="html/home.php">Home</a></li>
+      <li> <a href="html/Adoption.php">Adoption</a></li>
+      <li> <a href="Donation.php">Donation</a></li>
       <li> <a href="">About Us</a></li>
-      <li> <a href="/html/Adoption.html">Adoption</a></li>
-      <li> <a href="Donation.html">Donation</a></li>
       <li> <?php if (isset($_COOKIE['user'])) { ?>
-              <a href="../php/logout.php"> Logout </a>
+              <a href="php/logout.php"> Logout </a>
             <?php }else{ ?>
-              <a href="../html/loginpage.php"> Login</a>
+              <a href="html/loginpage.php"> Login</a>
             <?php }?></li>
 
       
@@ -252,12 +274,15 @@ input:not(:focus):valid ~ .floating-label6{
 
       
 
-      <input  type="submit" data-inline="true" value="Donate Now"><br><br>
+      <input  type="submit" data-inline="true" value="Donate Now" id="sub"><br><br>
 
 
 
 
    </form>
+</div>
+<div class="bot">
+  <?php include 'html/footer.php' ;?>
 </div>
 </body>
 </html>

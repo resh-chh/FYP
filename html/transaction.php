@@ -48,5 +48,8 @@ mysqli_close($conn);
 
 </form>
 </div>
+<div class="bot">
+    <?php include 'footer.php' ;?>
+</div>
 </body>
 </html>

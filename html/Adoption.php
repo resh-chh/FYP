@@ -90,19 +90,15 @@ float: left;
 display: inline;
 position: relative;
 float: left;
-
-
 }
-
 
 }
   
-
-
 </style>
 <body >
+<nav id="navbar">
 <?php include '../html/header.php' ;?>
-
+</nav>
 
 <div class="search col-12" style="background-color: lavender;">
 
@@ -169,7 +165,11 @@ while ($row=mysqli_fetch_array($result)) {
 ?>
 
 </div>
-  
+  <br>
+<br>
+<div class="bot">
+  <?php include 'footer.php' ;?>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://www.paypalobjects.com/api/checkout.js"></script>
@@ -518,6 +518,7 @@ $(document).ready(function(){
         }} 
          
     </script>
+
 </body>
 
 </html>

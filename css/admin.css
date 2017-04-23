@@ -40,3 +40,10 @@
 		.forms{
 			width: 100%;
 		}
+		.bot{
+			width: 100%;
+			margin: 0 auto;
+			margin-top: 3%;
+			padding: 5px;
+			border: 5px solid lavender;
+		}

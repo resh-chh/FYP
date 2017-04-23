@@ -12,7 +12,7 @@
 		<ul>
 			<li><a href="../html/home.php">Home</a></li>
 			<li><a href="../html/Adoption.php">Find A Pet</a></li>
-			<li><a href="#">Donation</a></li>
+			<li><a href="../Donation.php">Donation</a></li>
 			<li><a href="#">About Us</a></li>
 			<li class="rig"><a href="#"><img src="../img/shop.png" style="width: 40px; height: 30px"></a></li>
 

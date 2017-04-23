@@ -38,5 +38,8 @@ Location: <input list="location" name="location" default="Mumbai">
 </form>
 
 </div>
+<div class="bot">
+	<?php include 'footer.php' ;?>
+</div>
 </body>
 </html>

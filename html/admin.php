@@ -32,6 +32,8 @@
 </div>
 
 </div>
-
+<div class="bot">
+	<?php include 'footer.php' ;?>
+</div>
 </body>
 </html>

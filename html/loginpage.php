@@ -3,6 +3,16 @@
 <head>
 	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<style type="text/css">
+		
+		.bot{
+			width: 100%;
+			margin: 0 auto;
+			margin-top: 3%;
+			padding: 5px;
+			border: 5px solid lavender;
+		}
+	</style>
 </head>
 <body>
 <?php if(isset($_COOKIE['role'])){if($_COOKIE['role']=='admin') header('location: ../html/admin.php');}?>
@@ -35,6 +45,10 @@
 
 </form>
 
+</div>
+<br>
+<div class="bot">
+	<?php include 'footer.php' ;?>
 </div>
 </body>
 </html>
