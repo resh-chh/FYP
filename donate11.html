@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adoption</title>
+	<style type="text/css"  href="https://fonts.googleapis.com/css?family=Tangerine&effect=outline">
+		#navig 
+         {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+         }
+
+
+#out{
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 50%;
+  background-color: white;
+  filter: opacity(80%);
+  border: 1px solid black;
+}
+     nav li 
+         {
+    float: left;
+    margin-left: 40px: 
+         }
+
+    nav  li a {
+  display: inline-block;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 21px;
+}
+
+body 
+{
+	background: url(Background2.jpg);
+}
+
+nav li a:hover {background-color: #555;}
+
+ @font-face {
+    font-family: FontTitle;
+    src: url(Painter.ttf);
+}
+ #title
+  {
+   	font-family: FontTitle;
+    font-size: 50px;
+    font-style: italic;
+  } 
+
+  #donation_form
+  {
+    border-height: 100px;
+    border-width: 100px;
+    border-style: solid 5px;
+    border-color: black;
+    font-family: sans-serif;
+    font-size: 22px;
+  }
+
+#box
+{
+  border-radius: 5px;
+  border-color: red;
+  
+
+}
+::-webkit-input-placeholder { color:darkgrey; }
+
+ #one :focus ~ .floating-label1,
+input:not(:focus):valid ~ .floating-label1{
+  left: 705px;
+  top: 315px;
+  font-size: 14px;
+  opacity: 1;
+}
+
+.inputText {
+  padding-left: 10px;
+  width: 200px;
+  height: 35px;
+  font-size: 18px;
+}
+
+.floating-label1 {
+  position: absolute;
+  pointer-events: none;
+  left: 720px;
+  top: 280px;
+  font-size: 18px;
+  transition: 0.2s ease all;
+  opacity: 0.5;
+}
+
+#two :focus ~ .floating-label2,
+input:not(:focus):valid ~ .floating-label2{
+  left: 705px;
+  top: 380px;
+  font-size: 14px;
+  opacity: 1;
+}
+
+.inputText {
+  font-size: 18px;
+  padding-left: 10px;
+  width: 200px;
+  height: 35px;
+}
+
+.floating-label2 {
+  position: absolute;
+  pointer-events: none;
+  left: 720px;
+  top: 345px;
+  font-size: 18px;
+  transition: 0.2s ease all;
+  opacity: 0.5;
+}
+
+#three :focus ~ .floating-label3,
+input:not(:focus):valid ~ .floating-label3{
+  left: 705px;
+  top: 445px;
+  font-size: 14px;
+  opacity: 1;
+}
+
+.inputText {
+  font-size: 18px;
+  padding-left: 10px;
+  width: 200px;
+  height: 35px;
+}
+
+.floating-label3  {
+  position: absolute;
+  pointer-events: none;
+  left: 720px;
+  top: 410px;
+  font-size: 18px;
+  transition: 0.2s ease all;
+  opacity: 0.5;
+}
+
+#four :focus ~ .floating-label4,
+input:not(:focus):valid ~ .floating-label4{
+  left: 705px;
+  top: 510px;
+  font-size: 14px;
+  opacity: 1;
+}
+
+.inputText {
+  font-size: 18px;
+  padding-left: 10px;
+  width: 200px;
+  height: 35px;
+}
+
+.floating-label4  {
+  position: absolute;
+  pointer-events: none;
+  left: 720px;
+  top: 475px;
+  font-size: 18px;
+  transition: 0.2s ease all;
+  opacity: 0.5;
+}
+
+#five :focus ~ .floating-label5,
+input:not(:focus):valid ~ .floating-label5{
+  left: 705px;
+  top: 575px;
+  font-size: 14px;
+  opacity: 1;
+}
+
+.inputText {
+  font-size: 18px;
+  padding-left: 10px;
+  width: 250px;
+  height: 35px;
+}
+
+.floating-label5   {
+  position: absolute;
+  pointer-events: none;
+  left: 720px;
+  top: 540px;
+  font-size: 18px;
+  transition: 0.2s ease all;
+   opacity: 0.5;
+}
+
+#six :focus ~ .floating-label6,
+input:not(:focus):valid ~ .floating-label6{
+  left: 705px;
+  top: 640px;
+  font-size: 14px;
+  opacity: 1;
+}
+
+.inputText {
+  font-size: 18px;
+  padding-left: 10px;
+  width: 250px;
+  height: 35px;
+}
+
+.floating-label6   {
+  position: absolute;
+  pointer-events: none;
+  left: 720px;
+  top: 605px;
+  font-size: 18px;
+  transition: 0.2s ease all;
+   opacity: 0.5;
+}
+
+
+	</style>
+</head>
+<body>
+<h1 align="center" id="title">Find Your Pet</h1> 
+      
+
+   <nav id="navig">
+      <li> <a href="">Home</a></li>
+      <li> <a href="">About Us</a></li>
+      <li> <a href="Adoption.html">Adoption</a></li>
+      <li> <a href="Donation.html">Donation</a></li>
+      <li> <a href="">Contact Us</a></li>
+
+      
+   </nav>
+<div id="out">
+<h1 id="border_box" align="center">Donate for the Pets</h1>
+   <form id="donation_form" action="donate.php" method="POST" align="center">
+     
+        <div id="one">
+         Name <input id="box" name="name" type="text" class="inputText" required/>
+         <span class="floating-label1">Enter your name</span>
+      </div><br>
+        <div id="two">
+         Email-Id <input id="box" name="email" type="text" class="inputText" required/>
+         <span class="floating-label2">Enter your Email-Id</span>
+      </div><br>
+         
+         <div id="three">
+         Contact <input id="box" name="phone" type="text" class="inputText" required/>
+         <span class="floating-label3">Enter your Contact No</span>
+      </div><br>
+
+      <div id="four">
+         Address <input id="box" name="add" type="text" class="inputText" required/>
+         <span class="floating-label4">Enter your Address</span>
+      </div><br>
+
+          <div id="five">
+         Donation <input id="box" name="amount" type="text" class="inputText" required/>
+         <span class="floating-label5">Enter the amount</span>
+      </div><br>
+
+       <div id="six">
+         DOB <input id="box" name="dob" align="center" type="date" class="inputText" required/>
+        
+      </div><br>
+
+      
+
+      <input  type="submit" data-inline="true" value="Donate Now"><br><br>
+
+
+
+
+   </form>
+
+   </div>
+</body>
+</html>
