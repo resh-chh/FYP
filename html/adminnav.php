@@ -9,7 +9,7 @@
 	<nav>
 		<ul>
 			<li><a href="../html/admin.php">Home</a></li>
-			<li><a href="#">View Transactions</a></li>
+			<li><a href="../html/transaction.php">View Transactions</a></li>
 			<li class="ri"><?php if (isset($_COOKIE['user'])) { ?>
 							<a href="../php/logout.php"> Logout </a>
 						<?php }?>
