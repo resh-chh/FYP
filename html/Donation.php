@@ -38,14 +38,14 @@
 
 body 
 {
-	background: url(Background2.jpg);
+	background: url("../img/Background2.jpg");
 }
 
 nav li a:hover {background-color: #555;}
 
  @font-face {
     font-family: FontTitle;
-    src: url(Painter.ttf);
+    src: url(../Painter.ttf);
 }
  #title
   {
@@ -225,14 +225,14 @@ li:last-child{
       
 
    <nav id="navig">
-      <li> <a href="html/home.php">Home</a></li>
-      <li> <a href="html/Adoption.php">Adoption</a></li>
-      <li> <a href="Donation.php">Donation</a></li>
-      <li> <a href="">About Us</a></li>
+      <li> <a href="../html/home.php">Home</a></li>
+      <li> <a href="../html/Adoption.php">Adoption</a></li>
+      <li> <a href="../html/Donation.php">Donation</a></li>
+      <li> <a href="../html/AboutUs.php">About Us</a></li>
       <li> <?php if (isset($_COOKIE['user'])) { ?>
-              <a href="php/logout.php"> Logout </a>
+              <a href="../php/logout.php"> Logout </a>
             <?php }else{ ?>
-              <a href="html/loginpage.php"> Login</a>
+              <a href="../html/loginpage.php"> Login</a>
             <?php }?></li>
 
       
@@ -241,7 +241,7 @@ li:last-child{
 <div id="out">
 
 <h1 id="border_box" align="center">Donate for the Pets</h1>
-   <form id="donation_form" action="donate.php" method="POST" align="center">
+   <form id="donation_form" action="../php/donate.php" method="POST" align="center">
      
         <div id="one">
          Name <input id="box" name="name" type="text" class="inputText" required/>
