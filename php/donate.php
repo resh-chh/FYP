@@ -2,7 +2,7 @@
    $dbhost = 'localhost';
    $dbuser = 'root';
    $dbpass = '';
-   $dbname = 'pets';
+   $dbname = 'petfinder';
    
    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
    

@@ -9,7 +9,7 @@ function query()
 		}
 		else
 		{
-			mysqli_select_db($conn, "pets");
+			mysqli_select_db($conn, "petfinder");
 			$result = mysqli_query($conn, $sql);
 			if($result == TRUE)
 			{
