@@ -91,7 +91,7 @@ input:not(:focus):valid ~ .floating-label1{
 .floating-label1 {
   position: absolute;
   pointer-events: none;
-  left: 720px;
+  left: 630px;
   top: 290px;
   font-size: 18px;
   transition: 0.2s ease all;
@@ -110,7 +110,7 @@ input:not(:focus):valid ~ .floating-label2{
 .floating-label2 {
   position: absolute;
   pointer-events: none;
-  left: 720px;
+  left: 630px;
   top: 355px;
   font-size: 18px;
   transition: 0.2s ease all;
@@ -130,7 +130,7 @@ input:not(:focus):valid ~ .floating-label3{
 .floating-label3  {
   position: absolute;
   pointer-events: none;
-  left: 725px;
+  left: 630px;
   top: 420px;
   font-size: 18px;
   transition: 0.2s ease all;
@@ -140,7 +140,7 @@ input:not(:focus):valid ~ .floating-label3{
 #four :focus ~ .floating-label4,
 input:not(:focus):valid ~ .floating-label4{
   left: 705px;
-  top: 520px;
+  top: 525px;
   font-size: 14px;
   opacity: 1;
 }
@@ -150,8 +150,8 @@ input:not(:focus):valid ~ .floating-label4{
 .floating-label4  {
   position: absolute;
   pointer-events: none;
-  left: 720px;
-  top: 485px;
+  left: 630px;
+  top: 490px;
   font-size: 18px;
   transition: 0.2s ease all;
   opacity: 0.5;
@@ -160,7 +160,7 @@ input:not(:focus):valid ~ .floating-label4{
 #five :focus ~ .floating-label5,
 input:not(:focus):valid ~ .floating-label5{
   left: 705px;
-  top: 585px;
+  top: 590px;
   font-size: 14px;
   opacity: 1;
 }
@@ -170,8 +170,8 @@ input:not(:focus):valid ~ .floating-label5{
 .floating-label5   {
   position: absolute;
   pointer-events: none;
-  left: 720px;
-  top: 550px;
+  left: 630px;
+  top: 555px;
   font-size: 18px;
   transition: 0.2s ease all;
    opacity: 0.5;
@@ -180,7 +180,7 @@ input:not(:focus):valid ~ .floating-label5{
 #six :focus ~ .floating-label6,
 input:not(:focus):valid ~ .floating-label6{
   left: 705px;
-  top: 650px;
+  top: 655px;
   font-size: 14px;
   opacity: 1;
 }
@@ -190,7 +190,7 @@ input:not(:focus):valid ~ .floating-label6{
 .floating-label6   {
   position: absolute;
   pointer-events: none;
-  left: 720px;
+  left: 630px;
   top: 615px;
   font-size: 18px;
   transition: 0.2s ease all;
