@@ -15,7 +15,7 @@
          }
 
 
-     nav li 
+     nav, li 
          {
     float: left;
     margin-left: 40px: 
@@ -72,7 +72,13 @@ nav li a:hover {background-color: #555;}
    height: 500px;
     width: 800px;
     border: solid 2px;
-    margin-left: 350px;
+    margin: 0 auto;
+  }
+  li:last-child{
+    float: right;
+  }
+  nav{
+    width: 100%;
   }
 </style>
 </head>

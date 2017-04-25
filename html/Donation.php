@@ -77,6 +77,12 @@ nav li a:hover {background-color: #555;}
 }
 
 
+  li:last-child{
+    float: right;
+  }
+  nav{
+    width: 100%;
+  }
 ::-webkit-input-placeholder { color:darkgrey; }
 
 
