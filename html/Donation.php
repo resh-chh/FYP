@@ -2,6 +2,10 @@
 <html>
 <head>
 	<title>Adoption</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Find a pet to adopt">
+  <meta name="keywords" content="pet, pet finder, donate for pets, donate">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style type="text/css"  href="https://fonts.googleapis.com/css?family=Tangerine&effect=outline">
 		#navig 
          {

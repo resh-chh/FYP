@@ -4,6 +4,10 @@
   <title>
     FindYourPet
   </title>
+  <meta charset="utf-8">
+  <meta name="description" content="Find a pet to adopt">
+  <meta name="keywords" content="pet, pet finder, puppy finder, dog, cat, kitten, puppy, adopt a pet, rabbit, donate for pets, dog finder, adopt a kitten, adopt a pet near you, petfinder dogs, adopt a cat">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <style type="text/css">
