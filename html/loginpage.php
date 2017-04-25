@@ -12,6 +12,18 @@
 			padding: 5px;
 			border: 5px solid lavender;
 		}
+
+		@media only screen and (max-width: 750px){
+			form{
+				width: 70%;
+			}
+		}
+
+		@media only screen and (max-width: 450px){
+			div, form{
+				width: 90%;
+			}
+		}
 	</style>
 </head>
 <body>

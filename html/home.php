@@ -4,13 +4,15 @@
 	<title>
 		FindYourPet
 	</title>
-	<link rel="stylesheet" type="text/css" href="../css/mystyle.css">
+	<link rel="stylesheet" type="text/css" href="../css/mystyle1.css">
 </head>
 <body>
-<div>
-<?php if(isset($_COOKIE['role'])){if($_COOKIE['role']=='admin') header('location: ../html/admin.php');}?>
-<?php include 'header.php' ;?>
 
+<?php if(isset($_COOKIE['role'])){if($_COOKIE['role']=='admin') header('location: ../html/admin.php');}?>
+<div>
+<?php include 'header.php' ;?>
+</div>
+<div>
 	<a href="../html/loginpage.php"><div class="dat">
 		<h1 id=sec>Dogs Available For Adoption</h1>
 		<p id=sec1><q>The Journey of Life is sweeter when traveled with a Dog</q></p>
