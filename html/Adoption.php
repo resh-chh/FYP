@@ -15,7 +15,7 @@
 
 
 .textoverimage{
-  width: 80%;
+  width: 75%;
  margin-right: 10%;
 }
   .imagebox{
@@ -28,35 +28,40 @@
    height: auto;
    border-radius: 4px;
    box-shadow: 4px 4px lightgrey;
-   width: 100%;
+   width: 75%;
   }
-
-
 .search{
    margin-right: 10%;
    margin-left: 10%;
    background-color: grey;
    opacity: 1;
-   height: 70%;
+   height: 80%;
+   width: 75%;
    border-radius: 4px;
    box-shadow: 4px 4px lightgrey;
   }  
+
 
 }
 
 @media only screen and (min-width: 470px) and (max-width: 720px){
 
 .textoverimage{
-  width: 80%;
+  width: 32%;
 
+}
+.imagebox{
+  width: 80%;
 }
 
 .search{
+  
    margin-right: 10%;
    margin-left: 10%;
    background-color: grey;
    opacity: 1;
    height: 50%;
+   width: 80%;
    border-radius: 4px;
    box-shadow: 4px 4px lightgrey;
   }
@@ -65,6 +70,7 @@
 display: inline;
 position: relative;
 float: left;
+
 
 
 }
@@ -76,16 +82,18 @@ float: left;
 @media only screen and (min-width: 720px) and (max-width: 1204px){
 
 .textoverimage{
-  width: 39%;
+  width: 40%;
 }
- 
+ .imagebox{
+  width: 80%;
+ }
 .search{
    margin-right: 10%;
    margin-left: 10%;
    background-color: grey;
    opacity: 1;
+   width: 80%;
    height: auto;
-  
    border-radius: 4px;
    box-shadow: 4px 4px lightgrey;
   }
@@ -123,7 +131,7 @@ float: left;
 </div>
 <div class="field bread">
 <label for="animal" class="field-label">Breed</label>
-<select class="field-input " name="breed" id="inputbreed" style="width: 110px;" ></select>
+<select class="field-input " name="breed" id="inputbreed" ></select>
 </div>
 <div class="field gender">
 <label for="animal" class="field-label">Gender</label>
@@ -169,12 +177,6 @@ while ($row=mysqli_fetch_array($result)) {
 ?>
 
 </div>
-  <br>
-<br>
-<div class="bot">
-  <?php include 'footer.php' ;?>
-</div>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 
